@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Portal_Daneshjoii</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="portal_splash">پورتال دانشجویی</string>
+    <string name="tnb_club">TNB Club</string>
+    <string name="welcome_back">خوش آمدید</string>
+    <string name="read_it_together">سامانه ی پورتال دانشجویی تمام امکانات و فعالیت های سایت پورتال دانشجویی را داراست و تجربه ای بهتر را برای شما به ارمغان آورده است .</string>
+    <string name="std_code">شماره دانشجویی</string>
+    <string name="password">رمز عبور</string>
+    <string name="forget_password">رمز عبور را فراموش کردم</string>
+    <string name="login">ورود</string>
+    <string name="omor_mali">mali</string>
+    <string name="omor_amozeshi">امورآموزشی</string>
+    <string name="darkhast_daneshjoii">درخواست دانشجویی</string>
+    <string name="entekhab_vahed">انتخاب واحد</string>
+</resources>
