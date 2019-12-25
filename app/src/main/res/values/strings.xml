@@ -24,5 +24,10 @@
     <string name="exit">خروج از حساب</string>
     <string name="vaziate_tahsili">خلاصه وضعیت تحصیلی</string>
     <string name="my_image">profile_image</string>
+    <string name="shomarejadid">شماره موبایل جدید</string>
+    <string name="change_pass">تغییر رمز عبور</string>
+    <string name="nowpass">رمز عبور فعلی</string>
+    <string name="newpass">رمز جدید</string>
+    <string name="acceptnewpass">تکرار رمز جدید</string>
 
 </resources>

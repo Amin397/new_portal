@@ -1,5 +1,7 @@
 package com.example.portal_daneshjoii;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -14,12 +16,16 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.portal_daneshjoii.classes.Functions;
 import com.example.portal_daneshjoii.fragments.Darkhast_Daneshjoii;
 import com.example.portal_daneshjoii.fragments.Entekhab_Vahed;
 import com.example.portal_daneshjoii.fragments.Omor_Amozeshi;
 import com.example.portal_daneshjoii.fragments.Omor_Mali;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView Bottom_navigation;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    private TextView txt_Name , txt_Code;
+    private ImageView img_Profile;
+
+    private String std_name;
+    private String std_nationalCode;
+    private String std_code;
+
+    Functions f1 = new Functions(MainActivity.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
         initViews();
 
+        //SharedPreferences
+        //sharedData();
+
+        //Navigation View
         setSupportActionBar(toolbar);
         toolbar.setTitle("تهران شمال");
         ActionBar actionBar = getSupportActionBar();
@@ -44,6 +62,19 @@ public class MainActivity extends AppCompatActivity {
 
         Bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         Bottom_navigation.setSelectedItemId(R.id.omor_amozeshi_bottom_id);
+
+
+    }
+
+    private void sharedData() {
+        SharedPreferences saver = this.getSharedPreferences("login" , Context.MODE_PRIVATE);
+        std_name = saver.getString("FullName" , null);
+        txt_Name.setText(std_name);
+        std_code = saver.getString("StudentCode" , null);
+        txt_Code.setText(std_code);
+        std_nationalCode = saver.getString("NationalCode" , null);
+        String image = saver.getString("ProfilePic" , null);
+        Picasso.get().load(image).into(img_Profile);
     }
 
     private NavigationView.OnNavigationItemSelectedListener mNavigationDrawerItemSelectedListener
@@ -77,12 +108,17 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
                 case R.id.phone_id:{
-                    Toast.makeText(MainActivity.this, "phone", Toast.LENGTH_SHORT).show();
+                    f1.phoneChange(MainActivity.this , std_nationalCode, getLayoutInflater());
                     drawerLayout.closeDrawers();
                     break;
                 }
                 case R.id.exit_id:{
                     Toast.makeText(MainActivity.this, "exit", Toast.LENGTH_SHORT).show();
+                    drawerLayout.closeDrawers();
+                    break;
+                }
+                case R.id.change_pass_id:{
+                    f1.passwordChange(MainActivity.this , getLayoutInflater() , std_code);
                     drawerLayout.closeDrawers();
                     break;
                 }
@@ -96,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar_main_id);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_id);
         navigationView = (NavigationView) findViewById(R.id.navigation_view_id);
+
     }
 
     boolean doubleBackToExitPressedOnce = false;
