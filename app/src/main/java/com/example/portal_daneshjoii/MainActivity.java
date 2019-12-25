@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
         initViews();
 
-        //SharedPreferences
         //sharedData();
 
         //Navigation View
