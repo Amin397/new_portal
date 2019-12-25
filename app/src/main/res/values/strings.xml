@@ -15,5 +15,14 @@
     <string name="omor_amozeshi">امورآموزشی</string>
     <string name="darkhast_daneshjoii">درخواست دانشجویی</string>
     <string name="entekhab_vahed">انتخاب واحد</string>
+    <string name="person_info">اطلاعات شخصی</string>
+    <string name="email">پیام‌ها</string>
+    <string name="parvande">پرونده دیجیتال</string>
+    <string name="subheader">subheader</string>
+    <string name="map">نقشه</string>
+    <string name="phone">ثبت موبایل</string>
+    <string name="exit">خروج از حساب</string>
+    <string name="vaziate_tahsili">خلاصه وضعیت تحصیلی</string>
+    <string name="my_image">profile_image</string>
 
 </resources>
