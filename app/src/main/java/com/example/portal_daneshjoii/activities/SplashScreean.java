@@ -1,4 +1,4 @@
-package com.example.portal_daneshjoii;
+package com.example.portal_daneshjoii.activities;
 
 import android.animation.Animator;
 import android.app.ProgressDialog;
@@ -26,6 +26,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.portal_daneshjoii.MainActivity;
+import com.example.portal_daneshjoii.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
