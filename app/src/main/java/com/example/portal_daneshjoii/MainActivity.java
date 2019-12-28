@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
         Bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         Bottom_navigation.setSelectedItemId(R.id.omor_amozeshi_bottom_id);
 
-
     }
 
     private void sharedData() {
@@ -191,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private void loadFragment(Fragment fragment) {
+    public void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_container_tab_id , fragment);
         transaction.addToBackStack(null);

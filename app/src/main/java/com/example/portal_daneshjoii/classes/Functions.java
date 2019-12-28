@@ -3,6 +3,10 @@ package com.example.portal_daneshjoii.classes;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +30,7 @@ import java.util.Hashtable;
 public class Functions {
 
     Context context;
+    FragmentActivity fragmentActivity;
 
     public Functions(Context context) {
         this.context = context;
@@ -166,5 +171,12 @@ public class Functions {
             }
         });
         queue.add(request);
+    }
+
+    public void loadFragment(Fragment fragment) {
+        FragmentTransaction transaction = fragmentActivity.getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_container_tab_id , fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

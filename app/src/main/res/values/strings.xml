@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Portal_Daneshjoii</string>
+    <string name="app_name">پورتال دانشجویی</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -29,5 +29,9 @@
     <string name="nowpass">رمز عبور فعلی</string>
     <string name="newpass">رمز جدید</string>
     <string name="acceptnewpass">تکرار رمز جدید</string>
+    <string name="e_payment">پرداخت الکترونیک</string>
+    <string name="vaziate_mali">وضعیت مالی</string>
+    <string name="mohasebe_shahrie">محاسبه شهریه</string>
+    <string name="payment_error">پرداخت های ناموفق</string>
 
 </resources>

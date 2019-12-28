@@ -9,18 +9,44 @@
     android:background="#E1F0EEEE"
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_main_id"
-        app:layout_scrollFlags="scroll|enterAlways"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/color_withe"
-        android:layout_height="?attr/actionBarSize"/>
+        android:layout_height="match_parent">
 
-    <include layout="@layout/framw_content"/>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_main_id"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            app:titleTextColor="@color/color_withe"
+            android:background="@color/colorPrimary"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="end" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/frame_container_tab_id"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_below="@id/toolbar_main_id"
+            android:layout_height="match_parent">
+        </FrameLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        app:layout_anchor="@id/bottom_app_bar_id"
+        app:layout_anchorGravity="end"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:elevation="@dimen/elevation_5dp"
+        app:fabSize="normal"
+        app:backgroundTint="@color/fab_mark_color"
+        android:layout_margin="@dimen/margin_10dp"
+        android:layout_height="wrap_content" />
 
     <android.support.design.bottomappbar.BottomAppBar
         android:layout_width="match_parent"
         android:layout_gravity="bottom"
+        android:id="@+id/bottom_app_bar_id"
         app:buttonGravity="bottom"
         app:hideOnScroll="true"
         app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
@@ -34,6 +60,4 @@
             app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
             app:menu="@menu/bottom_navigation" />
     </android.support.design.bottomappbar.BottomAppBar>
-
-
 </android.support.design.widget.CoordinatorLayout>
