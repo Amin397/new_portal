@@ -1,9 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:background="@color/background"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#E1F5F2F2"
+    android:orientation="vertical"
     android:layout_height="match_parent">
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="3dp"
+        android:layout_margin="@dimen/margin_10dp"
+        app:cardElevation="@dimen/cardelevation_3dp"
+        android:layout_height="100dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:gravity="end"
+            android:background="@color/color_withe"
+            android:layout_height="100dp">
 
-</RelativeLayout>
+            <LinearLayout
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:weightSum="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_weight="0.3"
+                    android:text="@string/bill_payment"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textsize_18sp"
+                    android:fontFamily="@font/iransans"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+
+                <TextView
+                    android:layout_weight="0.8"
+                    android:text="@string/bill_det"
+                    android:padding="@dimen/padding_5dp"
+                    android:textSize="@dimen/textsize_14sp"
+                    android:fontFamily="@font/iransans"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:src="@drawable/ic_info_outline_black_24dp"
+                android:layout_width="0dp"
+                android:padding="@dimen/padding_5dp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/mablaghe_ghabele_pardakht"
+        android:textSize="@dimen/textsize_20sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_black"
+        android:layout_margin="@dimen/margin_5dp"
+        android:fontFamily="@font/iransans"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="3dp"
+        android:layout_margin="@dimen/margin_10dp"
+        app:cardElevation="@dimen/cardelevation_3dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textColor="@color/color_black"
+            android:hint="@string/rial"
+            android:textAlignment="gravity"
+            android:gravity="end"
+            android:maxLines="1"
+            android:id="@+id/txt_amount_id"
+            android:textSize="@dimen/textsize_18sp"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_pay_id"
+        android:background="@drawable/button_background"
+        android:layout_margin="@dimen/margin_10dp"
+        android:text="@string/pay"
+        android:textColor="@color/fab_detaile_color"
+        android:textSize="@dimen/textsize_20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/iransans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

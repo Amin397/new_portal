@@ -33,5 +33,10 @@
     <string name="vaziate_mali">وضعیت مالی</string>
     <string name="mohasebe_shahrie">محاسبه شهریه</string>
     <string name="payment_error">پرداخت های ناموفق</string>
+    <string name="bill_payment">پرداخت صورتحساب</string>
+    <string name="bill_det">شما میتوانید از طریق یکی از کارتهای شتاب بانکی خود پرداخت آنلاین داشته باشید !</string>
+    <string name="mablaghe_ghabele_pardakht">مبلغ قابل پرداخت (ريال) :</string>
+    <string name="rial">ريال</string>
+    <string name="pay">پرداخت</string>
 
 </resources>
