@@ -38,7 +38,9 @@
         app:layout_anchorGravity="end"
         app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         app:elevation="@dimen/elevation_5dp"
+        android:id="@+id/fab_back_fragment_id"
         app:fabSize="normal"
+        android:visibility="gone"
         app:backgroundTint="@color/fab_mark_color"
         android:layout_margin="@dimen/margin_10dp"
         android:layout_height="wrap_content" />
