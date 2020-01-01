@@ -38,5 +38,11 @@
     <string name="mablaghe_ghabele_pardakht">مبلغ قابل پرداخت (ريال) :</string>
     <string name="rial">ريال</string>
     <string name="pay">پرداخت</string>
+    <string name="bestankar">بستانکار</string>
+    <string name="bedehkar">بدهکار</string>
+    <string name="shomarehesabjari">شماره حساب جاری</string>
+    <string name="tarikhfish">تاریخ فیش</string>
+    <string name="shomarefish">شماره فیش</string>
+    <string name="itemmali">آیتم مالی</string>
 
 </resources>

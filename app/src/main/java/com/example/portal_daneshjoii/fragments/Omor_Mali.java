@@ -16,6 +16,8 @@ import android.widget.LinearLayout;
 
 import com.example.portal_daneshjoii.R;
 import com.example.portal_daneshjoii.fragments.mali.Pardakht_Electromic;
+import com.example.portal_daneshjoii.fragments.mali.Pardakht_Error;
+import com.example.portal_daneshjoii.fragments.mali.Vaziat_Mali;
 
 public class Omor_Mali extends Fragment {
 
@@ -32,9 +34,33 @@ public class Omor_Mali extends Fragment {
         initViews(view);
 
         payment_e.setOnClickListener(paymentEClickListener);
+        payment_error.setOnClickListener(paymentErrorClickListener);
+        vaziat_mali.setOnClickListener(vaziatMaliClickListener);
 
         return view;
     }
+
+    private CardView.OnClickListener vaziatMaliClickListener
+             = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            linear_menu.setVisibility(View.GONE);
+            frm_con_mali.setVisibility(View.VISIBLE);
+            fragmnet = new Vaziat_Mali();
+            loadFragment(fragmnet);
+        }
+    };
+
+    private CardView.OnClickListener paymentErrorClickListener
+             = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            linear_menu.setVisibility(View.GONE);
+            frm_con_mali.setVisibility(View.VISIBLE);
+            fragmnet = new Pardakht_Error();
+            loadFragment(fragmnet);
+        }
+    };
 
     private void initViews(View view) {
         payment_e = (CardView) view.findViewById(R.id.card_pardakht_e_id);

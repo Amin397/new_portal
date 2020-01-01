@@ -33,4 +33,5 @@
     <dimen name="margin_30dp">30dp</dimen>
     <dimen name="textsize_12sp">12sp</dimen>
     <dimen name="textsize_36sp">36sp</dimen>
+    <dimen name="margin_3dp">3dp</dimen>
 </resources>
